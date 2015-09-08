@@ -54,7 +54,7 @@ function print(prefix, prefix_color, msg, is_verbose){
 
     console.log(msg_decorated);
 
-    if( options.throw_on_error && prefix === 'err' ) {
+    if( log.options.throw_on_error && prefix === 'err' ) {
         throw new Error(msg);
     }
 
