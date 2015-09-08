@@ -1,0 +1,9 @@
+{
+  "name": "mini-log",
+  "version": "0.1.0",
+  "description": "mini(malistic) logs",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^1.1.1"
+  }
+}
