@@ -13,7 +13,8 @@ var log = mods_to_fcts();
 log.verbose = mods_to_fcts(true);
 log.options = {
     throw_on_error: false,
-    verbose: false
+    verbose: false,
+    no_blankline: false
 };
 module.exports = log;
 
@@ -43,7 +44,7 @@ function print(prefix, prefix_color, msg, is_verbose){
                 prefix));
 
     msg_decorated =
-        '\n' +
+        (log.options.no_blankline?'':'\n') +
         (msg||'')
         .replace(/^/, left_margin_text)
         .replace(/\n/g, '\n' + left_margin) ;
